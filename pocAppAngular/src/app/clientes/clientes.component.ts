@@ -23,7 +23,6 @@ const ELEMENT_DATA: clientes[] = [
 
 
 export class ClientesComponent {
-
   displayedColumns: string[] = ['nome', 'telefone', 'email', 'detalhes'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
