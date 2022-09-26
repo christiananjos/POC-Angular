@@ -1,0 +1,51 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="opened=!opened">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Personal</span>
+</mat-toolbar>
+
+
+<mat-sidenav-container>
+  <mat-sidenav [(opened)]="opened">
+    <mat-list role="list">
+      <mat-list-item role="listitem">
+        <button mat-button (click)="AbrirClientes()">
+          <mat-icon>people</mat-icon>
+          Clientes
+        </button>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <button mat-button (click)="AbrirAvaliacoes()">
+          <mat-icon>fact_check</mat-icon>
+          Avaliações
+        </button>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <button mat-button (click)="AbrirDietas()">
+          <mat-icon>list_alt</mat-icon>
+          Dietas
+        </button>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <button mat-button (click)="AbrirAgendamentos()">
+          <mat-icon>calendar_month</mat-icon>
+          Agendamentos
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <div *ngIf="displayCliente">
+    <app-clientes></app-clientes>
+  </div>
+  <div *ngIf="displayAvaliacoes">
+    <app-avaliacao></app-avaliacao>
+  </div>
+  <div *ngIf="displayDietas">
+    <app-dieta></app-dieta>
+  </div>
+  <div *ngIf="displayAgendamentos">
+    <app-agendamento></app-agendamento>
+  </div>
+  <!-- <app-rodape fxFlexOffset="auto"></app-rodape> -->
+</mat-sidenav-container>
