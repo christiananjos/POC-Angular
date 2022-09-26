@@ -15,6 +15,8 @@ const ELEMENT_DATA: clientes[] = [
   { nome: 'Cliente 4', telefone: '11999999999', email: 'teste@teste.com.br', detalhes: '' },
 ];
 
+
+
 @Component({
   selector: 'app-clientes',
   templateUrl: './clientes.component.html',
